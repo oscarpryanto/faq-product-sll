@@ -21,4 +21,4 @@ gcloud builds submit --tag $FULL_REPO/$IMAGE_NAME:latest .
 gcloud run deploy $IMAGE_NAME \
     --platform=managed \
     --allow-unauthenticated \
-    --image=$FULL_REPO/$IMAGE_NAME:latest --region=us-central1 --port=8502
+    --image=$FULL_REPO/$IMAGE_NAME:latest --region=us-central1 --port=8501
