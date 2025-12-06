@@ -17,6 +17,5 @@ COPY . .
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
 
-# Run Home.py when the container launches
-CMD ["streamlit", "run", "Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
-    
+# Run Home.py when the container launches using shell form to allow PORT variable expansion
+CMD streamlit run Home.py --server.port=${PORT:-8501} --server.address=0.0.0.0 --server.headless=true
