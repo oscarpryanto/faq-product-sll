@@ -1,8 +1,8 @@
 PROJECT_ID="${PROJECT_ID:-$(gcloud config get-value project)}"
 LOCATION="us"
-REPOSITORY="cooking-images"
+REPOSITORY="faq-product-sll"
 FULL_REPO="${LOCATION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}"
-IMAGE_NAME="recipe-web-app"
+IMAGE_NAME="faq-product-sll-app"
 
 if ! gcloud artifacts repositories describe "${REPOSITORY}" --location="${LOCATION}" --project="${PROJECT_ID}" &>/dev/null; then
     echo "Repository '$REPOSITORY' does not exist. Creating..."
